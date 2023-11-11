@@ -22,7 +22,6 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Jost&display=swap');
 
 body {
 	overflow: hidden;
@@ -32,15 +31,14 @@ body {
 	color: #fff;
 }
 
-.web-heading {
+h1 {
 	text-align: center;
-	font-family: Jomhuria;
-	font-size: 150px;
+	font-family: 'Jomhuria', serif;
+	font-size: 200px;
 	font-weight: 400;
 	background: linear-gradient(91deg, #CD4949 19.5%, #E96494 39.21%, #437EF0 60.16%, #74BF62 80.9%);
 	-webkit-background-clip: text;
 	background-clip: text;
-
 	color: transparent;
 }
 
