@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #17CA07);
+	background-size: 1000% 1000%;
+	animation: gradient 5s ease infinite;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	transition: 0.5s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.glass a {
+	text-decoration: none;
+}
+
+.glass {
+	cursor: pointer;
+}
+
+@media screen and (min-width:375px) and (max-width:425px) {
+	h1 {
+		position: absolute;
+		text-align: center;
+		color: white;
+		top: 10%;
+		font-size: 1.7em;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		top: 50px;
+		gap: 5px;
+	}
+
+	.container .img-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 0.8em;
+		padding: 0 2px;
+	}
+
+	.container .box {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		border-radius: 10px;
+	}
+
+	.container .box .imgBx {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		inset: 0;
+		border-radius: 12px;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.container .box .imgBx img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.container .box:hover .imgBx img {
+		opacity: 0.5;
+	}
+
+	.container .box .glass {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(#fff2, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(15px);
+		opacity: 0;
+		scale: 0;
+		transition: 0.5s;
+		border-radius: 10px;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.container .glass::before {
+		content: attr(data-text);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	.container .box:hover {
+		transform: rotate(-15deg);
+	}
+
+	.container .box:hover .glass {
+		opacity: 1;
+		scale: 1;
+		transform: rotate(20deg);
+	}
+
+	.container .glass h3 {
+		font-size: 0.5em;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-align: center;
+
+	}
+
+	.container .glass h3 span {
+		font-weight: 400;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+	h1 {
+		position: absolute;
+		text-align: center;
+		color: white;
+		top: 10%;
+		font-size: 1.6em;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		top: 50px;
+		gap: 30px;
+	}
+
+	.container .img-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 0.8em;
+		padding: 0 2px;
+	}
+
+	.container .box {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		border-radius: 10px;
+	}
+
+	.container .box .imgBx {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		inset: 0;
+		border-radius: 12px;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.container .box .imgBx img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.container .box:hover .imgBx img {
+		opacity: 0.5;
+	}
+
+	.container .box .glass {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(#fff2, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(15px);
+		opacity: 0;
+		scale: 0;
+		transition: 0.5s;
+		border-radius: 10px;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.container .glass::before {
+		content: attr(data-text);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	.container .box:hover {
+		transform: rotate(-15deg);
+	}
+
+	.container .box:hover .glass {
+		opacity: 1;
+		scale: 1;
+		transform: rotate(20deg);
+	}
+
+	.container .glass h3 {
+		font-size: 0.5em;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-align: center;
+
+	}
+
+	.container .glass h3 span {
+		font-weight: 400;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+	h1 {
+		position: absolute;
+		text-align: center;
+		color: white;
+		top: 10%;
+		font-size: 2em;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	.container .img-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 0.8em;
+	}
+
+	.container .box {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		border-radius: 10px;
+	}
+
+	.container .box .imgBx {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		inset: 0;
+		border-radius: 12px;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.container .box .imgBx img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.container .box:hover .imgBx img {
+		opacity: 0.5;
+	}
+
+	.container .box .glass {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(#fff2, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(15px);
+		opacity: 0;
+		scale: 0;
+		transition: 0.5s;
+		border-radius: 10px;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.container .glass::before {
+		content: attr(data-text);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	.container .box:hover {
+		transform: rotate(-15deg);
+	}
+
+	.container .box:hover .glass {
+		opacity: 1;
+		scale: 1;
+		transform: rotate(20deg);
+	}
+
+	.container .glass h3 {
+		font-size: 0.5em;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-align: center;
+
+	}
+
+	.container .glass h3 span {
+		font-weight: 400;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+	h1 {
+		position: absolute;
+		text-align: center;
+		color: white;
+		top: 10%;
+		font-size: 2em;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	.container .img-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 1em;
+	}
+
+	.container .box {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		border-radius: 10px;
+	}
+
+	.container .box .imgBx {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		inset: 0;
+		border-radius: 12px;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.container .box .imgBx img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.container .box:hover .imgBx img {
+		opacity: 0.5;
+	}
+
+	.container .box .glass {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(#fff2, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(15px);
+		opacity: 0;
+		scale: 0;
+		transition: 0.5s;
+		border-radius: 10px;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.container .glass::before {
+		content: attr(data-text);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	.container .box:hover {
+		transform: rotate(-15deg);
+	}
+
+	.container .box:hover .glass {
+		opacity: 1;
+		scale: 1;
+		transform: rotate(20deg);
+	}
+
+	.container .glass h3 {
+		font-size: 0.5em;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-align: center;
+
+	}
+
+	.container .glass h3 span {
+		font-weight: 400;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	h1 {
+		position: absolute;
+		text-align: center;
+		color: white;
+		top: 10%;
+		font-size: 3em;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	.container .img-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 1em;
+	}
+
+	.container .box {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		border-radius: 10px;
+	}
+
+	.container .box .imgBx {
+		position: absolute;
+		inset: 0;
+		border-radius: 12px;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.container .box .imgBx img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.container .box:hover .imgBx img {
+		opacity: 0.5;
+	}
+
+	.container .box .glass {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(#fff2, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(15px);
+		opacity: 0;
+		scale: 0;
+		transition: 0.5s;
+		border-radius: 10px;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.container .glass::before {
+		content: attr(data-text);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	.container .box:hover {
+		transform: rotate(-15deg);
+	}
+
+	.container .box:hover .glass {
+		opacity: 1;
+		scale: 1;
+		transform: rotate(20deg);
+	}
+
+	.container .glass h3 {
+		font-size: 1em;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-align: center;
+
+	}
+
+	.container .glass h3 span {
+		font-weight: 400;
+		font-size: 1.25em;
+	}
+}
