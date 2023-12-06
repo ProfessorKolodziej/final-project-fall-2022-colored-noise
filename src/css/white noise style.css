@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=IM+Fell+DW+Pica&family=Jost&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #BEBDBD, #A6A6A6, #929292, #878787);
+    background-size: 1000% 1000%;
+    animation: gradient 5s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (min-width:375px) {
+    .liquid {
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .liquid img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -25px;
+    }
+
+
+    h1 {
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 2.2em;
+        font-family: Allerta Stencil;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    a {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 1em;
+        font-family: IM FELL DW Pica;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        opacity: 1;
+    }
+
+    .small-box .link {
+        cursor: default;
+    }
+
+    .small-box .link:hover {
+        cursor: pointer;
+    }
+
+    .container {
+        position: absolute;
+        width: 80%;
+        height: 30vh;
+        top: 45%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 5px 5px 15px #000;
+        z-index: 3;
+
+    }
+
+    .small-box {
+        transition: .7s;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .small-box:hover {
+        flex-shrink: 0;
+    }
+
+    img {
+        width: 400px;
+        height: 100%
+    }
+
+    .small-box:hover .audio_controls {
+        visibility: visible;
+    }
+
+    .audio_controls {
+        position: absolute;
+        left: 40px;
+        bottom: 0;
+        width: 80%;
+        visibility: hidden;
+    }
+
+    .button {
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 50px;
+    }
+
+    .button .btn {
+        position: relative;
+        width: 45px;
+        height: 20px;
+        margin: 10px;
+    }
+
+    .button .btn a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        color: #fff;
+        z-index: 1;
+        font-family: Jost;
+        font-weight: 400;
+        font-size: 5px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(15px);
+    }
+
+    .button .btn:hover a {
+        color: #fff;
+        font-size: 5px;
+    }
+
+    .button .btn a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15));
+        transform: skewX(45deg) translateX(0);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover a::before {
+        transform: skewX(45deg) translateX(200%);
+    }
+
+    .button .btn::before,
+    .button .btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 10px;
+        background: var(--c);
+        border-radius: 5px;
+        box-shadow:
+            0 0 5px var(--c),
+            0 0 15px var(--c),
+            0 0 30px var(--c),
+            0 0 60px var(--c);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover::before,
+    .button .btn:hover::after {
+        height: 50%;
+        width: 80%;
+        border-radius: 15px;
+        transition-delay: 0.3s;
+    }
+
+    .button .btn::before {
+        bottom: -5px;
+    }
+
+    .button .btn:hover::before {
+        bottom: 0;
+    }
+
+    .button .btn::after {
+        top: -5px;
+    }
+
+    .button .btn:hover::after {
+        top: 0;
+    }
+
+    .button .btn:nth-child(1)::before,
+    .button .btn:nth-child(1)::after {
+        --c: #EAEAEA;
+    }
+
+    .button .btn:nth-child(2)::before,
+    .button .btn:nth-child(2)::after {
+        --c: #E96494;
+    }
+
+    .button .btn:nth-child(3)::before,
+    .button .btn:nth-child(3)::after {
+        --c: #f64f59;
+    }
+
+    .button .btn:nth-child(4)::before,
+    .button .btn:nth-child(4)::after {
+        --c: #437EF0;
+    }
+
+    .button .btn:nth-child(5)::before,
+    .button .btn:nth-child(5)::after {
+        --c: #74BF62;
+    }
+
+    .icon-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10vw;
+        animation: swing 0.5s ease infinite;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    .introduce {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        width: 90vw;
+        font-size: 0.7em;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        font-family: Jost;
+        opacity: 0;
+    }
+
+    .introduce_img {
+        margin-left: -1vw;
+        margin-right: 2vw;
+        margin-top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .bgChange {
+        transition: all .25s ease-in-out;
+        top: 0 !important;
+    }
+
+    .h1_change {
+        transition: all .25s ease-in-out;
+        top: calc(10% + 120px) !important;
+    }
+
+    .a_change {
+        transition: all .25s ease-in-out;
+        top: calc(28% + 80px) !important;
+    }
+
+    .introduce_change {
+        transition: all .25s ease-in-out;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .liquid {
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .liquid img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -100px;
+    }
+
+    h1 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 4.3em;
+        font-family: Allerta Stencil;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    a {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 1.8em;
+        font-family: IM FELL DW Pica;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        opacity: 1;
+    }
+
+    .small-box .link {
+        cursor: default;
+    }
+
+    .small-box .link:hover {
+        cursor: pointer;
+    }
+
+    .container {
+        position: absolute;
+        width: 80%;
+        height: 40vh;
+        top: 45%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 5px 5px 15px #000;
+        z-index: 3;
+
+    }
+
+    .small-box {
+        transition: .7s;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .small-box:hover {
+        flex-shrink: 0;
+    }
+
+    img {
+        width: 400px;
+        height: 100%
+    }
+
+    .small-box:hover .audio_controls {
+        visibility: visible;
+    }
+
+    .audio_controls {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+
+    .button {
+        width: 80%;
+        position: absolute;
+        bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 100px;
+    }
+
+    .button .btn {
+        position: relative;
+        width: 100px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .button .btn a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        color: #fff;
+        z-index: 1;
+        font-family: Jost;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(15px);
+    }
+
+    .button .btn:hover a {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .button .btn a::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15));
+
+        transform: skewX(45deg) translateX(0);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover a::before {
+        transform: skewX(45deg) translateX(200%);
+    }
+
+    .button .btn::before,
+    .button .btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 10px;
+        background: var(--c);
+        border-radius: 5px;
+        box-shadow:
+            0 0 5px var(--c),
+            0 0 15px var(--c),
+            0 0 30px var(--c),
+            0 0 60px var(--c);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover::before,
+    .button .btn:hover::after {
+        height: 50%;
+        width: 80%;
+        border-radius: 15px;
+        transition-delay: 0.3s;
+    }
+
+    .button .btn::before {
+        bottom: -5px;
+    }
+
+    .button .btn:hover::before {
+        bottom: 0;
+    }
+
+    .button .btn::after {
+        top: -5px;
+    }
+
+    .button .btn:hover::after {
+        top: 0;
+    }
+
+    .button .btn:nth-child(1)::before,
+    .button .btn:nth-child(1)::after {
+        --c: #EAEAEA;
+    }
+
+    .button .btn:nth-child(2)::before,
+    .button .btn:nth-child(2)::after {
+        --c: #E96494;
+    }
+
+    .button .btn:nth-child(3)::before,
+    .button .btn:nth-child(3)::after {
+        --c: #f64f59;
+    }
+
+    .button .btn:nth-child(4)::before,
+    .button .btn:nth-child(4)::after {
+        --c: #437EF0;
+    }
+
+    .button .btn:nth-child(5)::before,
+    .button .btn:nth-child(5)::after {
+        --c: #74BF62;
+    }
+
+    .icon-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10vw;
+        animation: swing 0.5s ease infinite;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    .introduce {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        width: 80vw;
+        font-size: 0.9em;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        font-family: Jost;
+        opacity: 0;
+    }
+
+    .introduce_img {
+        margin-left: -2vw;
+        margin-right: 2vw;
+        margin-top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .bgChange {
+        transition: all .25s ease-in-out;
+        top: 0 !important;
+    }
+
+    .h1_change {
+        transition: all .25s ease-in-out;
+        top: calc(10% + 100px) !important;
+    }
+
+    .a_change {
+        transition: all .25s ease-in-out;
+        top: calc(25% + 100px) !important;
+    }
+
+    .introduce_change {
+        transition: all .25s ease-in-out;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .liquid {
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .liquid img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -150px;
+    }
+
+    h1 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 5.5em;
+        font-family: Allerta Stencil;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    a {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        font-size: 1.8em;
+        font-family: IM FELL DW Pica;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        opacity: 1;
+    }
+
+    .small-box .link {
+        cursor: default;
+    }
+
+    .small-box .link:hover {
+        cursor: pointer;
+    }
+
+    .container {
+        position: absolute;
+        width: 80%;
+        height: 40vh;
+        top: 45%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 5px 5px 15px #000;
+        z-index: 3;
+
+    }
+
+    .small-box {
+        transition: .7s;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .small-box:hover {
+        flex-shrink: 0;
+    }
+
+    img {
+        width: 400px;
+        height: 100%
+    }
+
+    .small-box:hover .audio_controls {
+        visibility: visible;
+    }
+
+    .audio_controls {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+
+    .button {
+        position: absolute;
+        bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .button .btn {
+        position: relative;
+        width: 100px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .button .btn a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        color: #fff;
+        font-family: Jost;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(15px);
+    }
+
+    .button .btn:hover a {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .button .btn a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15));
+        transform: skewX(45deg) translateX(0);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover a::before {
+        transform: skewX(45deg) translateX(200%);
+    }
+
+    .button .btn::before,
+    .button .btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 10px;
+        background: var(--c);
+        border-radius: 5px;
+        box-shadow:
+            0 0 5px var(--c),
+            0 0 15px var(--c),
+            0 0 30px var(--c),
+            0 0 60px var(--c);
+        transition: 0.5s;
+    }
+
+    .button .btn:hover::before,
+    .button .btn:hover::after {
+        height: 50%;
+        width: 80%;
+        border-radius: 15px;
+        transition-delay: 0.3s;
+    }
+
+    .button .btn::before {
+        bottom: -5px;
+    }
+
+    .button .btn:hover::before {
+        bottom: 0;
+    }
+
+    .button .btn::after {
+        top: -5px;
+    }
+
+    .button .btn:hover::after {
+        top: 0;
+    }
+
+    .button .btn:nth-child(1)::before,
+    .button .btn:nth-child(1)::after {
+        --c: #EAEAEA;
+    }
+
+    .button .btn:nth-child(2)::before,
+    .button .btn:nth-child(2)::after {
+        --c: #E96494;
+    }
+
+    .button .btn:nth-child(3)::before,
+    .button .btn:nth-child(3)::after {
+        --c: #f64f59;
+    }
+
+    .button .btn:nth-child(4)::before,
+    .button .btn:nth-child(4)::after {
+        --c: #437EF0;
+    }
+
+    .button .btn:nth-child(5)::before,
+    .button .btn:nth-child(5)::after {
+        --c: #74BF62;
+    }
+
+    .icon-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10vw;
+        animation: swing 0.5s ease infinite;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    .introduce {
+        display: flex;
+        position: absolute;
+        top: 25px;
+        width: 90vw;
+        font-size: 1.1em;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        font-family: Jost;
+        opacity: 0;
+    }
+
+    .introduce_img {
+        margin-left: -2vw;
+        margin-right: 2vw;
+        margin-top: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .bgChange {
+        transition: all .25s ease-in-out;
+        top: 0 !important;
+    }
+
+    .h1_change {
+        transition: all .25s ease-in-out;
+        top: calc(10% + 75px) !important;
+    }
+
+    .a_change {
+        transition: all .25s ease-in-out;
+        top: calc(30% + 75px) !important;
+    }
+
+    .introduce_change {
+        transition: all .25s ease-in-out;
+        opacity: 1;
+    }
+}

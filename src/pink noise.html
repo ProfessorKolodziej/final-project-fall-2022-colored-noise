@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Update your description here" />
+    <title>Colored Noise</title>
+    <link rel="stylesheet" href="css/pink noise style.css">
+
+</head>
+
+<body>
+
+    <div class="liquid">
+        <img src="images/pink liquid.png" alt="pink">
+    </div>
+    <h1 class="title_h1">Pink Noise</h1>
+    <div class="introduce">
+        <img src="./images/icon.png" alt="" class="introduce_img">
+        <p>Say hello to pink noise, the dreamy lullaby for your sleep sanctuary! It is a type of sound that's
+            characterized by equal energy per octave, which means it has more power in the lower frequencies compared to
+            higher ones.As a rhythmic blend of frequencies with a special touch, it's like a sonic sandman, slowing
+            brain waves and promoting a harmonious slumber. With its power-packed lower frequencies, pink noise
+            serenades you into dreamland, masking disturbances like a sleep-savvy ninja. So, if you're on a quest for
+            the ultimate beauty sleep, let pink noise be your nightly companion. </p>
+    </div>
+    <a class="title_a">Choose the pink sample you like!</a>
+    <img src="./images/white earphone.png" class="icon" alt="signifier">
+
+    <div class="container">
+        <div class="small-box">
+            <img src="./images/pink1.png">
+            <a class="link">Sample1</a>
+            <audio src="./audio/audio1.ogg" controls class="audio_controls"></audio>
+        </div>
+        <div class="small-box">
+            <img src="./images/pink2.png">
+            <a class="link">Sample2</a>
+            <audio src="./audio/audio2.ogg" controls class="audio_controls"></audio>
+        </div>
+        <div class="small-box">
+            <img src="./images/pink3.png">
+            <a class="link">Sample3</a>
+            <audio src="./audio/autio3.ogg" controls class="audio_controls"></audio>
+        </div>
+        <div class="small-box">
+            <img src="./images/pink4.png">
+            <a class="link">Sample4</a>
+            <audio src="./audio/audio4.ogg" controls class="audio_controls"></audio>
+        </div>
+        <div class="small-box">
+            <img src="./images/pink5.png">
+            <a class="link">Sample5</a>
+            <audio src="./audio/audio5.ogg" controls class="audio_controls"></audio>
+        </div>
+    </div>
+
+    <div class="button">
+        <div class="btn"><a href="#">Homepage</a></div>
+        <div class="btn"><a href="white noise.html">White Noise</a></div>
+        <div class="btn"><a href="red noise.html">Red Noise</a></div>
+        <div class="btn"><a href="blue noise.html">Blue Noise</a></div>
+        <div class="btn"><a href="green noise.html">Green Noise</a></div>
+    </div>
+
+    <script>
+        let audio_controls = document.querySelectorAll('.audio_controls')
+        audio_controls.forEach((item, index) => {
+            item.addEventListener('play', () => {
+                audio_controls.forEach((el, currentIndex) => {
+                    if (index !== currentIndex) {
+                        el.pause()
+                        el.currentTime = 0
+                    }
+                })
+                item.play()
+            })
+        })
+
+        let icon = document.querySelector('.icon')
+        let bg = document.querySelector('.liquid img')
+        let title_h1 = document.querySelector('.title_h1')
+        let title_a = document.querySelector('.title_a')
+        let introduce = document.querySelector('.introduce')
+        let liquid = document.querySelector('.liquid')
+
+        let opener = false
+        icon.onclick = () => {
+            if (opener == false) {
+                bg.classList.add('bgChange')
+                title_h1.classList.add('h1_change')
+                title_a.classList.add('a_change')
+                introduce.classList.add('introduce_change')
+                opener = true
+                return
+            }
+            bg.classList.remove('bgChange')
+            title_h1.classList.remove('h1_change')
+            title_a.classList.remove('a_change')
+            introduce.classList.remove('introduce_change')
+            opener = false
+        }
+    </script>
+</body>
+
+</html>
