@@ -41,6 +41,22 @@ body {
 	cursor: pointer;
 }
 
+.greentext-in-h3 {
+	color: #8EE964;
+}
+
+.pinktext-in-h3 {
+	color: #F09AB9;
+}
+
+.redtext-in-h3 {
+	color: #F23048;
+}
+
+.bluetext-in-h3 {
+	color: #73BCF1;
+}
+
 @media screen and (min-width: 375px) and (max-width: 425px) {
 	h1 {
 		position: absolute;
