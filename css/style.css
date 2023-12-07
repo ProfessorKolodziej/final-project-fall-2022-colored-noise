@@ -2,7 +2,7 @@
 
 body {
 	overflow: hidden;
-	background: #FFFFFF33 url('../images/background.gif') center/cover no-repeat fixed;
+	background: #FFF3 url('../images/background.gif') center/cover no-repeat fixed;
 	height: 100vh;
 	background-color: #000;
 	color: #fff;
@@ -39,6 +39,7 @@ section .item .heading {
 	font-style: italic;
 	font-weight: bold;
 	font-size: 11vw;
+	font-family: "Allerta Stencil", sans-serif;
 	top: 0;
 	opacity: 1;
 	transition: top 0.5s, opacity 0.5s;
@@ -73,26 +74,15 @@ section .item a {
 	opacity: 0;
 	transition: opacity 0.5s;
 	font-size: 1.5em;
+	font-family: Jost, sans-serif;
 	text-shadow: 0 0 20px rgb(255 255 255 / 70%), 0 0 30px rgb(255 255 255 / 70%), 0 0 40px rgb(255 255 255 / 70%);
 }
 
 section .item a:hover {
-	cursor: none;
-
+	cursor: pointer;
 }
 
 section .item:hover a {
 	opacity: 1;
 	transition: opacity 0.5s;
-}
-
-section .item a:hover::before {
-	content: "";
-	position: fixed;
-	top: var(--cursor-y);
-	left: var(--cursor-x);
-	width: 10px;
-	height: 10px;
-	background-color: #fff;
-	border-radius: 50%;
 }

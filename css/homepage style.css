@@ -43,18 +43,22 @@ body {
 
 .greentext-in-h3 {
 	color: #8EE964;
+	font-family: Jost, sans-serif;
 }
 
 .pinktext-in-h3 {
 	color: #F09AB9;
+	font-family: Jost, sans-serif;
 }
 
 .redtext-in-h3 {
 	color: #F23048;
+	font-family: Jost, sans-serif;
 }
 
 .bluetext-in-h3 {
 	color: #73BCF1;
+	font-family: Jost, sans-serif;
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
@@ -90,6 +94,7 @@ body {
 		color: white;
 		font-size: 0.8em;
 		padding: 0 2px;
+		font-family: Jost, sans-serif;
 	}
 
 	.container .box {
@@ -171,6 +176,7 @@ body {
 		font-size: 0.5em;
 		color: #fff;
 		font-weight: 500;
+		font-family: Jost, sans-serif;
 		letter-spacing: 0.1em;
 		text-align: center;
 
@@ -179,6 +185,7 @@ body {
 	.container .glass h3 span {
 		font-weight: 400;
 		font-size: 1.25em;
+		font-family: Jost, sans-serif;
 	}
 }
 
@@ -189,6 +196,7 @@ body {
 		color: white;
 		top: 10%;
 		font-size: 1.6em;
+		font-family: Jost, sans-serif;
 		margin-left: 5%;
 		margin-right: 5%;
 	}
@@ -214,6 +222,7 @@ body {
 	h2 {
 		color: white;
 		font-size: 0.8em;
+		font-family: Jost, sans-serif;
 		padding: 0 2px;
 	}
 
@@ -296,14 +305,15 @@ body {
 		font-size: 0.5em;
 		color: #fff;
 		font-weight: 500;
+		font-family: Jost, sans-serif;
 		letter-spacing: 0.1em;
 		text-align: center;
-
 	}
 
 	.container .glass h3 span {
 		font-weight: 400;
 		font-size: 1.25em;
+		font-family: Jost, sans-serif;
 	}
 }
 
@@ -314,6 +324,7 @@ body {
 		color: white;
 		top: 10%;
 		font-size: 2em;
+		font-family: Jost, sans-serif;
 	}
 
 	.container {
@@ -417,14 +428,15 @@ body {
 		font-size: 0.5em;
 		color: #fff;
 		font-weight: 500;
+		font-family: Jost, sans-serif;
 		letter-spacing: 0.1em;
 		text-align: center;
-
 	}
 
 	.container .glass h3 span {
 		font-weight: 400;
 		font-size: 1.25em;
+		font-family: Jost, sans-serif;
 	}
 }
 
@@ -435,6 +447,7 @@ body {
 		color: white;
 		top: 10%;
 		font-size: 2em;
+		font-family: Jost, sans-serif;
 	}
 
 	.container {
@@ -457,6 +470,7 @@ body {
 	h2 {
 		color: white;
 		font-size: 1em;
+		font-family: Jost, sans-serif;
 	}
 
 	.container .box {
@@ -538,14 +552,15 @@ body {
 		font-size: 0.5em;
 		color: #fff;
 		font-weight: 500;
+		font-family: Jost, sans-serif;
 		letter-spacing: 0.1em;
 		text-align: center;
-
 	}
 
 	.container .glass h3 span {
 		font-weight: 400;
 		font-size: 1.25em;
+		font-family: Jost, sans-serif;
 	}
 }
 
@@ -556,6 +571,7 @@ body {
 		color: white;
 		top: 10%;
 		font-size: 3em;
+		font-family: Jost, sans-serif;
 	}
 
 	.container {
@@ -578,6 +594,7 @@ body {
 	h2 {
 		color: white;
 		font-size: 1em;
+		font-family: Jost, sans-serif;
 	}
 
 	.container .box {
@@ -657,6 +674,7 @@ body {
 		font-size: 1em;
 		color: #fff;
 		font-weight: 500;
+		font-family: Jost, sans-serif;
 		letter-spacing: 0.1em;
 		text-align: center;
 
@@ -665,5 +683,6 @@ body {
 	.container .glass h3 span {
 		font-weight: 400;
 		font-size: 1.25em;
+		font-family: Jost, sans-serif;
 	}
 }
