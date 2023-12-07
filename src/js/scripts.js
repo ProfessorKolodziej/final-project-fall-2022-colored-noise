@@ -6,10 +6,6 @@
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
 
-document.querySelector("section .item a").addEventListener("mousemove", function (e) {
-	document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
-	document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
-});
 
 let audio_controls = document.querySelectorAll('.audio-controls')
 audio_controls.forEach((item, index) => {
@@ -48,5 +44,9 @@ icon.onclick = () => {
 	opener = false
 }
 
+document.querySelectorAll("section .item a").addEventListener("mousemove", function (e) {
+	document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
+	document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
+});
 
 
