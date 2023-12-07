@@ -59,7 +59,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
-		font-size: 2.2em;
+		font-size: 1.9em;
 		font-family: "Allerta Stencil", sans-serif;
 		color: #fff;
 		text-shadow: 2px 2px 4px #000;
@@ -349,7 +349,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
-		font-size: 4.3em;
+		font-size: 3.9em;
 		font-family: "Allerta Stencil", sans-serif;
 		color: #fff;
 		text-shadow: 2px 2px 4px #000;
@@ -644,7 +644,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 2;
-		font-size: 5.5em;
+		font-size: 5.2em;
 		font-family: "Allerta Stencil", sans-serif;
 		color: #fff;
 		text-shadow: 2px 2px 4px #000;
